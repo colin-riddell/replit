@@ -1,7 +1,7 @@
 {
-  "name": "react-repl-emulator",
-  "version": "1.0.0",
-  "description": "a small repl component in react",
+  "name": "react-repl-new",
+  "version": "1.0.1",
+  "description": "JavaScript repl",
   "main": "dist/index.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -11,7 +11,7 @@
     "build-babel": "babel src --presets babel-preset-es2015  --out-dir dist",
     "build-css": "node-sass src/Components/Style/Main.scss src/Components/Style/Main.css"
   },
-  "author": "Hussein Farah",
+  "author": "Colin Riddell",
   "license": "ISC",
   "babel": {
     "presets": [
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "babel": "^6.23.0",
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-css-modules-transform": "^1.2.7",

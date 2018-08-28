@@ -29,7 +29,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// import './console.scss' 
+// import './console.scss'
 
 
 var Console = function (_React$Component) {
@@ -80,7 +80,7 @@ var Console = function (_React$Component) {
   }, {
     key: 'addStyling',
     value: function addStyling(props) {
-      // Maybe change this to JS css file 
+      // Maybe change this to JS css file
       var consoleElem = document.getElementsByClassName('console')[0];
       if (props.style.height) {
         consoleElem.style.height = props.style.height;
@@ -99,32 +99,12 @@ var Console = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
-
       return _react2.default.createElement(
         'div',
         { className: 'console' },
         _react2.default.createElement(
           'div',
-          { className: 'panel' },
-          '  ',
-          _react2.default.createElement(
-            'button',
-            { onClick: function onClick() {
-                return _this3.props.clearHistory();
-              } },
-            ' Clear History '
-          ),
-          ' '
-        ),
-        _react2.default.createElement(
-          'div',
           { className: 'consoleInterative' },
-          _react2.default.createElement(
-            'span',
-            null,
-            'Native Browser JavaScript'
-          ),
           _react2.default.createElement('br', null),
           _react2.default.createElement('br', null),
           this.props.historyToDisplay.map(function (elem, idx) {

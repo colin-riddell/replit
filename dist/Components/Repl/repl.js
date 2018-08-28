@@ -41,9 +41,8 @@ var Repl = function (_React$Component) {
         afterCursor: ''
       },
       style: {}
-    };
-    // Bind Methods
-    _this.handleToggleHistory = _this.handleToggleHistory.bind(_this);
+      // Bind Methods
+    };_this.handleToggleHistory = _this.handleToggleHistory.bind(_this);
     _this.handleInput = _this.handleInput.bind(_this);
     _this.handleSubmit = _this.handleSubmit.bind(_this);
     _this.clearHistory = _this.clearHistory.bind(_this);

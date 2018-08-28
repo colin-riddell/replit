@@ -1,19 +1,19 @@
 import React from 'react'
 import Prompt from '../Prompt/prompt.js'
 import Response from '../Response/response.js'
-// import './console.scss' 
+// import './console.scss'
 import jss from 'js-stylesheet';
 
 export default class Console extends React.Component {
   constructor(props) {
-    super(props) 
+    super(props)
     this.addStyling = this.addStyling.bind(this)
     this.addListeners = this.addListeners.bind(this)
-  }  
+  }
 
   componentDidMount() {
     jss(require('../Style/style.js'))
-    this.addListeners() 
+    this.addListeners()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -31,7 +31,7 @@ export default class Console extends React.Component {
       // Right Key
       else if(e.keyCode === 39) this.props.moveCursor('RIGHT')
       // Enter Key
-      else if(e.keyCode === 13){ 
+      else if(e.keyCode === 13){
         e.preventDefault()
         this.props.handleSubmit()
       }
@@ -39,7 +39,7 @@ export default class Console extends React.Component {
   }
 
   addStyling(props) {
-    // Maybe change this to JS css file 
+    // Maybe change this to JS css file
     let consoleElem = document.getElementsByClassName('console')[0]
     if(props.style.height) {
       consoleElem.style.height = props.style.height
@@ -62,9 +62,7 @@ export default class Console extends React.Component {
   render() {
     return  (
       <div className="console">
-        <div className="panel">  <button onClick={() => this.props.clearHistory()}> Clear History </button> </div>
         <div className="consoleInterative">
-          <span>Native Browser JavaScript</span>
           <br />
           <br />
         {
@@ -80,7 +78,7 @@ export default class Console extends React.Component {
           )
         }
         <Prompt isActive={true} currentPrompt={this.props.currentPrompt} handleInput={this.props.handleInput}/>
-      </div> 
+      </div>
       </div>
     )
   }
